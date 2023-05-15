@@ -13,4 +13,9 @@ allow {
 allow {
   input.attributes.request.http.method == "GET"
   input.parsed_path = ["hr", "dashboard"]
-} 
+}
+
+allow {
+  input.attributes.request.http.method == "POST"
+  input.parsed_path = ["hr", "dashboard"]
+}
